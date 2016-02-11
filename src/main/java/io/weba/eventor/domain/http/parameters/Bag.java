@@ -1,47 +1,47 @@
 package io.weba.eventor.domain.http.parameters;
 
 public interface Bag {
-    public String getTrackerId();
+    String getTrackerId();
 
-    public int getEventType();
+    int getEventType();
 
-    public String getUrl();
+    String getUrl();
 
-    public int getWidth();
+    int getWidth();
 
-    public int getHeight();
+    int getHeight();
 
-    public int getAvailableWidth();
+    int getAvailableWidth();
 
-    public int getAvailableHeight();
+    int getAvailableHeight();
 
-    public boolean isTouch();
+    boolean isTouch();
 
-    public boolean isCookie();
+    boolean isCookie();
 
-    public boolean isJavaScript();
+    boolean isJavaScript();
 
-    public boolean isFlash();
+    boolean isFlash();
 
-    public boolean isPdf();
+    boolean isPdf();
 
-    public boolean isJava();
+    boolean isJava();
 
-    public boolean isQuickTime();
+    boolean isQuickTime();
 
-    public boolean isRealPlayer();
+    boolean isRealPlayer();
 
-    public boolean isSilverLight();
+    boolean isSilverLight();
 
-    public boolean isWindowsMedia();
+    boolean isWindowsMedia();
 
-    public boolean isSessionStorage();
+    boolean isSessionStorage();
 
-    public boolean isLocalStorage();
+    boolean isLocalStorage();
 
-    public boolean isCanvas();
+    boolean isCanvas();
 
-    public boolean isAdBlock();
+    boolean isAdBlock();
 
-    public String getRequestDate();
+    String getRequestDate();
 }

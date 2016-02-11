@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 
 public class EnrichmentChainBuilder {
-
     private LinkedHashSet<Enrichment> chain = new LinkedHashSet<Enrichment>();
 
     @SuppressWarnings({"unchecked"})

@@ -1,22 +1,20 @@
 package io.weba.eventor.domain.event;
 
-import io.weba.eventor.domain.exception.EventorException;
-
 import java.util.UUID;
 
-public class Id {
+public class ID {
     public final UUID id;
 
-    public Id(String id) throws EventorException {
+    public ID(String id) {
         this.id = UUID.fromString(id);
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Id)) return false;
+        if (!(o instanceof ID)) return false;
 
-        Id id1 = (Id) o;
+        ID id1 = (ID) o;
 
         return id.equals(id1.id);
 

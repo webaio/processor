@@ -4,5 +4,5 @@ import io.weba.eventor.domain.event.Event;
 import io.weba.eventor.domain.exception.EventorException;
 
 public interface Eventor {
-    Event exploitFromAccessLog(String accessLog) throws EventorException;
+    Event exploitFromLog(String log) throws EventorException;
 }

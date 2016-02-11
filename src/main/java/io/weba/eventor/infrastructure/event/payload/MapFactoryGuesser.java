@@ -8,7 +8,6 @@ import io.weba.eventor.domain.exception.EventorException;
 import java.util.Map;
 
 public class MapFactoryGuesser implements FactoryGuesser {
-
     private Map<Type, Factory> map;
 
     public MapFactoryGuesser(Map<Type, Factory> map) {

@@ -1,14 +1,14 @@
 package io.weba.eventor.domain.device.fingerprint;
 
 import io.weba.eventor.domain.device.features.Features;
-import io.weba.eventor.domain.log.HttpLog;
+import io.weba.eventor.domain.log.Entry;
 
 public class Fingerprinting {
-    public final HttpLog httpLog;
+    public final Entry entry;
     public final Features features;
 
-    public Fingerprinting(HttpLog httpLog, Features features) {
-        this.httpLog = httpLog;
+    public Fingerprinting(Entry entry, Features features) {
+        this.entry = entry;
         this.features = features;
     }
 }

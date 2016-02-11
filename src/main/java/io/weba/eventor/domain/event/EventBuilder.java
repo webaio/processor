@@ -5,7 +5,7 @@ import io.weba.eventor.domain.event.payload.Payload;
 import io.weba.eventor.domain.localization.Localization;
 
 public class EventBuilder {
-    public Id id;
+    public ID id;
     public Type type = Type.PAGE_VIEW;
     public Payload payload;
     public Device device;

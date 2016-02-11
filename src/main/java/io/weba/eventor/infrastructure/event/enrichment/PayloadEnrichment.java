@@ -3,10 +3,9 @@ package io.weba.eventor.infrastructure.event.enrichment;
 import io.weba.eventor.domain.event.payload.Factory;
 import io.weba.eventor.domain.event.payload.FactoryGuesser;
 import io.weba.eventor.domain.exception.EventorException;
-import io.weba.eventor.infrastructure.event.resolver.HttpContext;
+import io.weba.eventor.infrastructure.event.mine.HttpContext;
 
 public class PayloadEnrichment implements Enrichment {
-
     FactoryGuesser factoryGuesser;
 
     public PayloadEnrichment(FactoryGuesser factoryGuesser) {

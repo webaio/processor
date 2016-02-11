@@ -7,14 +7,14 @@ import io.weba.eventor.domain.localization.Localization;
 import java.util.Objects;
 
 public class Event {
-    public final Id id;
+    public final ID id;
     public final Type type;
     public final Payload payload;
     public final Device device;
     public final Localization localization;
     public final Dates dates;
 
-    public Event(Id id, Type type, Payload payload, Device device, Localization localization, Dates dates) {
+    public Event(ID id, Type type, Payload payload, Device device, Localization localization, Dates dates) {
         this.id = Objects.requireNonNull(id);
         this.type = Objects.requireNonNull(type);
         this.payload = Objects.requireNonNull(payload);

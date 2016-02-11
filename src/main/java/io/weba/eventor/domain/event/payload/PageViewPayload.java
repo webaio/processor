@@ -1,9 +1,6 @@
 package io.weba.eventor.domain.event.payload;
 
-import io.weba.eventor.domain.event.TrackerId;
-import io.weba.eventor.domain.event.URL;
-import io.weba.eventor.domain.event.UserAgent;
-import io.weba.eventor.domain.event.VisitorIdentity;
+import io.weba.eventor.domain.event.*;
 
 public class PageViewPayload implements Payload {
 
@@ -27,5 +24,9 @@ public class PageViewPayload implements Payload {
 
     public TrackerId getTrackerId() {
         return this.pageViewPayloadAggregate.tracerId;
+    }
+
+    public IP getIp() {
+        return this.pageViewPayloadAggregate.ip;
     }
 }
