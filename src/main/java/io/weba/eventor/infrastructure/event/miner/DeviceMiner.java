@@ -1,13 +1,13 @@
-package io.weba.eventor.infrastructure.event.enrichment;
+package io.weba.eventor.infrastructure.event.miner;
 
 import io.weba.eventor.domain.device.detector.Detector;
 import io.weba.eventor.domain.exception.EventorException;
 import io.weba.eventor.infrastructure.event.mine.HttpContext;
 
-public class DeviceEnrichment implements Enrichment {
+public class DeviceMiner implements Miner {
     private Detector detector;
 
-    public DeviceEnrichment(Detector detector) {
+    public DeviceMiner(Detector detector) {
         this.detector = detector;
     }
 
