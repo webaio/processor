@@ -5,13 +5,13 @@ import io.weba.eventor.domain.event.mine.ContextWrapper;
 import io.weba.eventor.domain.event.mine.Mine;
 import io.weba.eventor.domain.exception.EventorException;
 import io.weba.eventor.domain.exception.resolver.UnexpectedContextException;
-import io.weba.eventor.infrastructure.event.enrichment.Enrichment;
+import io.weba.eventor.infrastructure.event.miner.Miner;
 
 public class LogEntryMine implements Mine {
-    private Enrichment enrichment;
+    private Miner miner;
 
-    public LogEntryMine(Enrichment enrichment) {
-        this.enrichment = enrichment;
+    public LogEntryMine(Miner miner) {
+        this.miner = miner;
     }
 
     public Event exploit(ContextWrapper contextWrapper) throws EventorException {
@@ -24,7 +24,7 @@ public class LogEntryMine implements Mine {
         HttpContext httpContext = (HttpContext) contextWrapper.context;
         httpContext.eventBuilder.clean();
 
-        this.enrichment.enrich(httpContext);
+        this.miner.enrich(httpContext);
 
         return httpContext.eventBuilder.build();
     }

@@ -1,4 +1,4 @@
-package io.weba.eventor.infrastructure.event.enrichment;
+package io.weba.eventor.infrastructure.event.miner;
 
 import io.weba.eventor.domain.event.Dates;
 import io.weba.eventor.domain.exception.EventorException;
@@ -7,7 +7,7 @@ import org.joda.time.DateTime;
 
 import java.util.Date;
 
-public class DatesEnrichment implements Enrichment {
+public class DatesMiner implements Miner {
     public void enrich(HttpContext httpContext) throws EventorException {
         Date serverDate = new DateTime(httpContext.entry.request.date).toDate();
         Date browserDate = serverDate;

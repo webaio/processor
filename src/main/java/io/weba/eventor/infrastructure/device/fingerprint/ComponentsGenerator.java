@@ -25,6 +25,7 @@ public class ComponentsGenerator implements Generator {
 
     private String prepareFingerprintHash(Entry entry, Features features, String userAgent) {
         HashFunction hashFunction = Hashing.sha256();
+
         return hashFunction.newHasher()
                 .putBytes(userAgent.getBytes())
                 .putBytes(entry.request.IP.getBytes())

@@ -7,7 +7,7 @@ import io.weba.eventor.domain.device.fingerprint.Generator;
 import io.weba.eventor.domain.exception.EventorException;
 import io.weba.eventor.domain.log.Entry;
 
-public abstract class LogEntryDetector implements Detector {
+public abstract class BaseWebTrackerDetector implements Detector {
     protected Generator generator;
 
     public void setGenerator(Generator generator) {

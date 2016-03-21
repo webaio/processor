@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk8
+
+before_script:
+  - wget https://raw.githubusercontent.com/51Degrees/Java-Device-Detection/master/data/51Degrees-LiteV3.2.dat
+  - if [ ! -d "src/main/resources" ]; then mkdir src/main/resources; fi
+  - mv 51Degrees-LiteV3.2.dat src/main/resources/51Degrees.dat
+
+script:
+  - mvn clean
+  - mvn package
