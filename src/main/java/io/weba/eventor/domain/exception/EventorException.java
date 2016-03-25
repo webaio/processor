@@ -4,4 +4,8 @@ public class EventorException extends Exception {
     public EventorException(String message) {
         super(message);
     }
+
+    public EventorException(String message, Throwable cause) {
+        super(message, cause);
+    }
 }

@@ -11,7 +11,7 @@ public class DeviceMiner implements Miner {
         this.detector = detector;
     }
 
-    public void enrich(HttpContext httpContext) throws EventorException {
+    public void exploit(HttpContext httpContext) throws EventorException {
         httpContext.eventBuilder.device = this.detector.detect(httpContext.entry);
     }
 }

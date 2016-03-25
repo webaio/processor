@@ -30,7 +30,7 @@ public class Degress51Detector extends BaseWebTrackerDetector {
 
             return features;
         } catch (IOException e) {
-            throw new EventorException(e.toString());
+            throw new EventorException(e.getMessage(), e);
         }
     }
 

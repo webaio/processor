@@ -10,7 +10,6 @@ import io.weba.eventor.domain.http.voter.Voter;
 import io.weba.eventor.domain.log.Entry;
 import io.weba.eventor.domain.log.reader.Reader;
 import io.weba.eventor.infrastructure.event.mine.HttpContext;
-import io.weba.eventor.infrastructure.log.gson.reader.GsonReader;
 
 public class ApplicationEventor implements Eventor {
     private Mine mine;
@@ -18,7 +17,7 @@ public class ApplicationEventor implements Eventor {
     private EventBuilder eventBuilder;
     private Voter voter;
 
-    public ApplicationEventor(Mine mine, GsonReader reader, EventBuilder eventBuilder, Voter voter) {
+    public ApplicationEventor(Mine mine, Reader reader, EventBuilder eventBuilder, Voter voter) {
         this.mine = mine;
         this.reader = reader;
         this.eventBuilder = eventBuilder;
@@ -26,6 +25,14 @@ public class ApplicationEventor implements Eventor {
     }
 
     public Event exploitFromLog(String log) throws EventorException {
+        try {
+            return doExploitFromLog(log);
+        } catch (NullPointerException e) {
+            throw new EventorException("NullPointerException: ", e);
+        }
+    }
+
+    private Event doExploitFromLog(String log) throws EventorException {
         eventBuilder.clean();
 
         Entry entry = reader.read(log);
@@ -36,4 +43,6 @@ public class ApplicationEventor implements Eventor {
                 entry)
         ));
     }
+
+
 }

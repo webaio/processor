@@ -3,7 +3,7 @@ package io.weba.eventor.infrastructure.event.payload;
 import io.weba.eventor.domain.event.IP;
 import io.weba.eventor.domain.event.TrackerId;
 import io.weba.eventor.domain.event.UserAgent;
-import io.weba.eventor.domain.event.payload.Factory;
+import io.weba.eventor.domain.event.payload.PayloadFactory;
 import io.weba.eventor.domain.event.payload.PageViewPayload;
 import io.weba.eventor.domain.event.payload.PageViewPayloadAggregate;
 import io.weba.eventor.domain.event.payload.Payload;
@@ -13,11 +13,11 @@ import io.weba.eventor.infrastructure.event.mine.HttpContext;
 import io.weba.eventor.infrastructure.event.utils.UrlProvider;
 import io.weba.eventor.infrastructure.event.utils.VisitorIdentityProvider;
 
-public class PageViewFactory implements Factory {
+public class PageViewPayloadFactory implements PayloadFactory {
     private UrlProvider urlProvider;
     private VisitorIdentityProvider visitorIdentityProvider;
 
-    public PageViewFactory(UrlProvider urlProvider, VisitorIdentityProvider visitorIdentityProvider) {
+    public PageViewPayloadFactory(UrlProvider urlProvider, VisitorIdentityProvider visitorIdentityProvider) {
         this.urlProvider = urlProvider;
         this.visitorIdentityProvider = visitorIdentityProvider;
     }

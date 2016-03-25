@@ -8,7 +8,7 @@ public class IP {
 
     public IP(String ip) throws EventorException {
         if (!InetAddresses.isInetAddress(ip)) {
-            throw new EventorException("IP ".concat(ip).concat(" is not valid inet address."));
+            throw new EventorException("IP ".concat(ip).concat(" is not valid IP address."));
         }
         this.ip = ip;
     }

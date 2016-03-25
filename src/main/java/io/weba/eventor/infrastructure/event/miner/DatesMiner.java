@@ -8,7 +8,7 @@ import org.joda.time.DateTime;
 import java.util.Date;
 
 public class DatesMiner implements Miner {
-    public void enrich(HttpContext httpContext) throws EventorException {
+    public void exploit(HttpContext httpContext) throws EventorException {
         Date serverDate = new DateTime(httpContext.entry.request.date).toDate();
         Date browserDate = serverDate;
 

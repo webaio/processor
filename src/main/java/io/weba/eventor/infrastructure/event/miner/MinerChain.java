@@ -12,9 +12,9 @@ public class MinerChain implements Miner {
         this.chain = chain;
     }
 
-    public void enrich(HttpContext httpContext) throws EventorException {
+    public void exploit(HttpContext httpContext) throws EventorException {
         for (Miner miner : chain) {
-            miner.enrich(httpContext);
+            miner.exploit(httpContext);
         }
     }
 }
