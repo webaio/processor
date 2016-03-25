@@ -3,9 +3,9 @@ package io.weba.eventor.infrastructure.log.gson.deserializer;
 import com.google.gson.*;
 import io.weba.eventor.domain.http.Request;
 import io.weba.eventor.domain.http.Response;
-import io.weba.eventor.domain.http.parameters.Initializer;
 import io.weba.eventor.domain.localization.Localization;
 import io.weba.eventor.domain.log.Entry;
+import io.weba.eventor.infrastructure.http.parameters.Initializer;
 
 import java.lang.reflect.Type;
 
@@ -18,7 +18,7 @@ public class HttpLogDeserializer implements JsonDeserializer<Entry> {
         }
 
         JsonObject jsonObject = json.getAsJsonObject();
-        Request request = (Request) context.deserialize(jsonObject.get("request"), Request.class);
+        Request request = context.deserialize(jsonObject.get("request"), Request.class);
 
         return new Entry(
                 request,

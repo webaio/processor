@@ -1,6 +1,8 @@
-package io.weba.eventor.domain.http.parameters;
+package io.weba.eventor.infrastructure.http.parameters;
 
 import io.weba.eventor.domain.http.Request;
+import io.weba.eventor.domain.http.parameters.Bag;
+import io.weba.eventor.domain.http.parameters.MapBag;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
