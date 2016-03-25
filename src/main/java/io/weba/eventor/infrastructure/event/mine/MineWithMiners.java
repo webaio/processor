@@ -7,24 +7,22 @@ import io.weba.eventor.domain.exception.EventorException;
 import io.weba.eventor.domain.exception.resolver.UnexpectedContextException;
 import io.weba.eventor.infrastructure.event.miner.Miner;
 
-public class LogEntryMine implements Mine {
+public class MineWithMiners implements Mine {
     private Miner miner;
 
-    public LogEntryMine(Miner miner) {
+    public MineWithMiners(Miner miner) {
         this.miner = miner;
     }
 
     public Event exploit(ContextWrapper contextWrapper) throws EventorException {
         if (!(contextWrapper.context instanceof HttpContext)) {
-            throw new UnexpectedContextException("LogEntryMine support " +
-                    "io.weba.eventor.infrastructure.eventor.entrypoint.HttpContext<io.weba.eventor.domain.entry.Entry>."
-            );
+            throw new UnexpectedContextException("Only io.weba.eventor.domain.event.mine.ContextWrapper is supported.");
         }
 
         HttpContext httpContext = (HttpContext) contextWrapper.context;
         httpContext.eventBuilder.clean();
 
-        this.miner.enrich(httpContext);
+        this.miner.exploit(httpContext);
 
         return httpContext.eventBuilder.build();
     }

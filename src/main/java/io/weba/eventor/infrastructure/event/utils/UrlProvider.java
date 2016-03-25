@@ -22,7 +22,7 @@ public class UrlProvider {
         try {
             url = new URL(URLDecoder.decode(httpContext.entry.parameters.getUrl(), "UTF-8"));
         } catch (UnsupportedEncodingException e) {
-            throw new EventorException(e.toString());
+            throw new EventorException(e.getMessage(), e);
         }
 
         return url;
@@ -37,7 +37,7 @@ public class UrlProvider {
             return new URL(httpContext.entry.request.headers.bag.get("referrer").value);
         }
 
-        throw new EventorException("Cannot utterEventFromAccessLog url from referrer header in pixel fallback strategy.");
+        throw new EventorException("Cannot obtain url from referrer header in pixel fallback strategy.");
     }
 
     private boolean isPixelFallbackUrl(HttpContext httpContext) {

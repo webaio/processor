@@ -15,7 +15,7 @@ public class MinersChainBuilder {
         return processorChain;
     }
 
-    public void addEnrichment(Miner miner) {
+    public void addMiner(Miner miner) {
         chain.add(miner);
     }
 
