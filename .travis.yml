@@ -1,12 +1,25 @@
 language: java
+
 jdk:
   - oraclejdk8
+
+sudo: required
+
+services:
+  - docker
 
 before_script:
   - wget https://raw.githubusercontent.com/51Degrees/Java-Device-Detection/master/data/51Degrees-LiteV3.2.dat
   - if [ ! -d "src/main/resources" ]; then mkdir src/main/resources; fi
   - mv 51Degrees-LiteV3.2.dat src/main/resources/51Degrees.dat
+  - docker run -d -p 9200:9200 -p 9300:9300 elasticsearch:2.3.1
+  - docker run -d -p 6379:6379 redis:3.0.7-alpine
+  - sleep 10
+  - docker ps
+
+env:
+  - ELASTICSEARCH_TEST_HOST=localhost ELASTICSEARCH_TEST_PORT=9300 REDIS_TEST_HOST=localhost REDIS_TEST_PORT=6379
 
 script:
-  - mvn clean
-  - mvn package
+  - gradle clean
+  - gradle build
