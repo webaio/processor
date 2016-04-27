@@ -104,3 +104,4 @@ target/
 build/
 .gradle/
 src/main/resources/51Degrees.dat
+classes/
