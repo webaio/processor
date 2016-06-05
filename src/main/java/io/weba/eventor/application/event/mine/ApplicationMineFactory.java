@@ -17,32 +17,26 @@ import io.weba.eventor.infrastructure.event.utils.UrlProvider;
 import io.weba.eventor.infrastructure.event.utils.VisitorIdentityProvider;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.HashMap;
 
 public class ApplicationMineFactory implements MineFactory {
     @Override
-    public Mine create() throws EventorException {
+    public Mine create(String deviceDetectorDbPath) throws EventorException {
         MinersChainBuilder processorEventChainBuilder = new MinersChainBuilder();
         processorEventChainBuilder.addMiner(new IdMiner());
         processorEventChainBuilder.addMiner(new DatesMiner());
         processorEventChainBuilder.addMiner(new EventTypeMiner());
         processorEventChainBuilder.addMiner(new LocalizationMiner());
-        processorEventChainBuilder.addMiner(new DeviceMiner(prepareDeviceDetector()));
+        processorEventChainBuilder.addMiner(new DeviceMiner(prepareDeviceDetector(deviceDetectorDbPath)));
         processorEventChainBuilder.addMiner(preparePayloadMiner());
 
         return new MineWithMiners(processorEventChainBuilder.buildChain());
     }
 
-    private Degress51Detector prepareDeviceDetector() throws EventorException {
-        URL url = ApplicationMineFactory.class.getClassLoader().getResource("51Degrees.dat");
-        if(url == null) {
-            throw new EventorException("Cannot find 51Degrees.dat in resources.");
-        }
-
+    private Degress51Detector prepareDeviceDetector(String deviceDetectorDbPath) throws EventorException {
         Provider provider = null;
         try {
-            provider = new Provider(StreamFactory.create(url.getPath(), false));
+            provider = new Provider(StreamFactory.create(deviceDetectorDbPath, false));
         } catch (IOException e) {
             throw new EventorException("DeviceDetector creating stream resource exception:", e);
         }

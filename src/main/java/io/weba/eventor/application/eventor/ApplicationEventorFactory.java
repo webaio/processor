@@ -16,9 +16,9 @@ public class ApplicationEventorFactory implements EventorFactory {
     private VoterFactory voterFactory = new VoterFactory();
 
     @Override
-    public Eventor create() throws IOException, EventorException {
+    public Eventor create(String deviceDetectorDbPath) throws IOException, EventorException {
         return new ApplicationEventor(
-                mineFactory.create(),
+                mineFactory.create(deviceDetectorDbPath),
                 new GsonReader(GsonFactory.create()),
                 new EventBuilder(),
                 voterFactory.create()

@@ -5,5 +5,5 @@ import io.weba.eventor.domain.exception.EventorException;
 import java.io.IOException;
 
 public interface EventorFactory {
-    Eventor create() throws IOException, EventorException;
+    Eventor create(String deviceDetectorDbPath) throws IOException, EventorException;
 }
