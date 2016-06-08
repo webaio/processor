@@ -10,6 +10,6 @@ public class Response {
     }
 
     public boolean isSuccessfulStatusCode() {
-        return statusCode == 200;
+        return statusCode == 200 || statusCode == 204;
     }
 }
