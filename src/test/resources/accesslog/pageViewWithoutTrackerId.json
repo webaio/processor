@@ -1,0 +1,26 @@
+{
+  "request": {
+    "id": "0c450b1c-dfbd-4cc2-8ab2-ba2291c56061",
+    "uri": "http:\/\/100.0.0.205\/\/",
+    "method": "GET",
+    "headers": "R0VUIC8vP3ZpPTBjYzU4YTQwLTc0ZTItNGI5NC1hMzE1LWVhNzAyNDllYTMyMyZkbD1odHRwJTNBJTJGJTJGcmVxdWVzdHMucmVhZHRoZWRvY3Mub3JnJTJGcmVjb21tZW5kZWQlMkYmZT1wYWdlVmlldyZkaT0weDFkYjcmY2I9NjRhZmM5NTEtZjU4ZS00ODM4LWJjMDAtYzc1ZjFhNzQyMDFjJmRlPVVURi04JnN2PTE2ODB4MTA1MCZjZD0yNCZzaT1lYWMxZDU0ZS02YjgzLTRhNzItYTM3Ny1lMzM4ZWZjZDgyM2QmdD0xOTJkYjI4NS00MTM4LTQ0ZTktOTJiMy02ODhhMjBkMmE1NWUmc3I9MTY3NHg1NTcmZHQ9bG9yZW0raXBzdW0rbG9yZW0mc3Q9MTQ3MTEwNzY3MC4xNDcxMTA3NjcwLjE0NzExMDk0NzAuMTQ3MTEwNzY3MCZsPXBsIEhUVFAvMS4xDQpIb3N0OiAxMDAuMC4wLjIwNQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUyxlbjtxPTAuNQ0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpYLUZvcndhcmRlZC1Gb3I6IDIwOS4zLjEzNi4yNDENCkFjY2VwdDogYXBwbGljYXRpb24vanNvbiwgdGV4dC9qYXZhc2NyaXB0LCAqLyo7IHE9MC4wMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTBfNSkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzQ5LjAuMjYyMy4xMTIgU2FmYXJpLzUzNy4zNg0KQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uDQoNCg==",
+    "content": "",
+    "date": "2016-08-13T18:01:10+00:00",
+    "remote_addr": "172.17.0.1",
+    "x_forwarded_for": "209.3.136.241"
+  },
+  "response": {
+    "status": "204",
+    "headers": "Y29ubmVjdGlvbjpjbG9zZQ0K"
+  },
+  "localization": {
+    "country": "USA",
+    "region": "MA",
+    "city": "Northborough",
+    "postal_code": "01532",
+    "continent": "NA",
+    "latitude": "42.3218",
+    "longitude": "-71.6350"
+  },
+  "device": "Mac OS X,NA,10.10,Chrome,NA,49,NA,NA,NA,NA,NA,False,NA,NA,NA,NA,NA,NA"
+}
