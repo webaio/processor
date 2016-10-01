@@ -37,7 +37,10 @@ public class DeviceDetectorRecognizerImpl implements Recognizer {
             }
 
             if (featureName.contains("Is")) {
-                features.put(featureName, Boolean.parseBoolean(deviceStrings[i]));
+                features.put(
+                        featureName,
+                        deviceStrings[i].toLowerCase().matches("^(true|1|on)+$")
+                );
                 continue;
             }
 

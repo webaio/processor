@@ -46,7 +46,7 @@ public class WebTrackerDeviceInfoRecognizerImpl implements Recognizer {
 
             features.put(
                     featureName,
-                    Boolean.parseBoolean(String.valueOf(deviceString.charAt(i)))
+                    String.valueOf(deviceString.charAt(i)).toLowerCase().matches("^(true|1|on)+$")
             );
         }
     }

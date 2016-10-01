@@ -24,7 +24,7 @@
     },
     "device": {
       "fingerprint": {
-        "fingerprint": "a25971e768f8a07b1e4a16164ae40eceff36a9344f887891b7b94b9a99d16533",
+        "fingerprint": "f2586db85856b91bc7e22844142667d07945bc7f0db72a7c4238e37405aa486a",
         "quality": 34
       },
       "features": {
@@ -52,15 +52,15 @@
         "height": 557,
         "is_ad_block": false,
         "is_canvas": false,
-        "is_cookie": false,
-        "is_flash": false,
-        "is_java": false,
-        "is_javascript": false,
-        "is_local_storage": false,
-        "is_pdf": false,
-        "is_quick_time": false,
-        "is_real_player": false,
-        "is_session_storage": false,
+        "is_cookie": true,
+        "is_flash": true,
+        "is_java": true,
+        "is_javascript": true,
+        "is_local_storage": true,
+        "is_pdf": true,
+        "is_quick_time": true,
+        "is_real_player": true,
+        "is_session_storage": true,
         "is_touch": false,
         "width": 1674
       }
