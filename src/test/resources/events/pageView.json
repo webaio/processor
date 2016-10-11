@@ -1,0 +1,90 @@
+{
+  "id": "0c450b1c-dfbd-4cc2-8ab2-ba2291c56061",
+  "type": "page_view",
+  "visitor": {
+    "id": "0cc58a40-74e2-4b94-a315-ea70249ea323",
+    "first_visit_date": "2016-08-13T18:54:30.000+0200"
+  },
+  "session": {
+    "id": "eac1d54e-6b83-4a72-a377-e338efcd823d",
+    "start_date": "2016-08-13T19:01:10.000+0200",
+    "end_date": "2016-08-13T19:31:10.000+0200"
+  },
+  "enriched": {
+    "localization": {
+      "country": "USA",
+      "region": "MA",
+      "city": "Northborough",
+      "postal_code": "01532",
+      "continent": "NA",
+      "geo": {
+        "lat": 42.3218,
+        "lon": -71.635
+      }
+    },
+    "device": {
+      "fingerprint": {
+        "fingerprint": "f2586db85856b91bc7e22844142667d07945bc7f0db72a7c4238e37405aa486a",
+        "quality": 34
+      },
+      "features": {
+        "browser_name": "Chrome",
+        "browser_vendor": null,
+        "browser_version": "49",
+        "hardware_model": null,
+        "hardware_name": null,
+        "hardware_vendor": null,
+        "is_console": false,
+        "is_crawler": false,
+        "is_e_reader": false,
+        "is_mobile": false,
+        "is_small_screen": false,
+        "is_smart_phone": false,
+        "is_smart_watch": false,
+        "is_tablet": false,
+        "is_tv": false,
+        "platform_name": "Mac OS X",
+        "platform_vendor": null,
+        "platform_version": "10.10",
+        "available_height": 1050,
+        "available_width": 1680,
+        "color_depth": 24,
+        "height": 557,
+        "is_ad_block": false,
+        "is_canvas": false,
+        "is_cookie": true,
+        "is_flash": true,
+        "is_java": true,
+        "is_javascript": true,
+        "is_local_storage": true,
+        "is_pdf": true,
+        "is_quick_time": true,
+        "is_real_player": true,
+        "is_session_storage": true,
+        "is_touch": false,
+        "width": 1674
+      }
+    }
+  },
+  "payload": {
+    "url_parts": {
+      "protocol": "http",
+      "host": "requests.readthedocs.org",
+      "query": null,
+      "authority": "requests.readthedocs.org",
+      "path": "/recommended/",
+      "user_info": null
+    },
+    "document_encoding": "UTF-8",
+    "tracker_id": "192db285-4138-44e9-92b3-688a20d2a55e",
+    "user_agent": "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/49.0.2623.112 Safari\/537.36",
+    "url_full": "http:\/\/requests.readthedocs.org\/recommended\/",
+    "document_title": "lorem+ipsum+lorem",
+    "remote_addr": "209.3.136.241",
+    "user_language": "pl"
+  },
+  "dates": {
+    "client": "2016-08-13T19:06:10.000+0200",
+    "server": "2016-08-13T20:01:10.000+0200"
+  }
+}

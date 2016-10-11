@@ -1,0 +1,22 @@
+machine:
+  timezone: "Europe/Warsaw"
+
+  java:
+    version: oraclejdk8
+
+general:
+  artifacts:
+    - "build/libs/weba-all.jar"
+  branches:
+    only:
+      - master
+      - develop
+      - /feature.*/
+      - /hotfix.*/
+      - /bugfix.*/
+
+dependencies:
+  override:
+    - ./gradlew clean
+    - ./gradlew build
+    - ./gradlew shadowJar

@@ -1,32 +1,18 @@
+/*
+ * This file is part of the Weba.IO package.
+ *
+ * Copyright (c) 2016 Damian Zientalak, Marcin Nitschke, Michał Sikora
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 package io.weba.processor;
 
-import io.weba.processor.flink.EventCollectorSink;
-import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer09;
-import org.apache.flink.streaming.util.serialization.SimpleStringSchema;
-
-import java.util.Properties;
-
 public class Main {
-    public static void main(String[] args) throws Exception {
-        ArgumentParser argumentParser = new ArgumentParser(args);
-        Configuration configuration = argumentParser.configuration;
-
-        StreamExecutionEnvironment streamExecutionEnvironment = StreamExecutionEnvironment.getExecutionEnvironment();
-        Properties properties = new Properties();
-        properties.setProperty("bootstrap.servers", configuration.kafkaHost + ":" + configuration.kafkaPort);
-
-        streamExecutionEnvironment
-                .addSource(new FlinkKafkaConsumer09<>(configuration.kafkaTopic, new SimpleStringSchema(), properties))
-                .addSink(new EventCollectorSink<String>(
-                        configuration.memsqlHost,
-                        configuration.memsqlPort,
-                        configuration.memsqlDatabase,
-                        configuration.memsqlUser,
-                        configuration.memsqlPassword,
-                        configuration.deviceDetectorDabasePath
-                ));
-
-        streamExecutionEnvironment.execute("Execute event collector (kafka -> memsql)");
+    public static void main(String [] args) {
+        System.out.println("This is Weba.IO Processor component.");
+        System.out.println("You can use it with Apache Flink as a job.");
+        System.out.println("Please visit https://github.com/webaio/processor to find out more.");
     }
 }
