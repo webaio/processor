@@ -24,8 +24,8 @@
     },
     "device": {
       "fingerprint": {
-        "fingerprint": "f2586db85856b91bc7e22844142667d07945bc7f0db72a7c4238e37405aa486a",
-        "quality": 34
+        "fingerprint": "0b7559385ccd8bdf7bad6e7a7c3386e6beabd5f5b585cdeb9d0388cf43d687dd",
+        "quality": 35
       },
       "features": {
         "browser_name": "Chrome",
@@ -50,17 +50,18 @@
         "available_width": 1680,
         "color_depth": 24,
         "height": 557,
-        "is_ad_block": false,
-        "is_canvas": false,
+        "is_ad_block": true,
+        "is_canvas": true,
         "is_cookie": true,
         "is_flash": true,
-        "is_java": true,
+        "is_java": false,
         "is_javascript": true,
         "is_local_storage": true,
-        "is_pdf": true,
-        "is_quick_time": true,
-        "is_real_player": true,
+        "is_pdf": false,
+        "is_quick_time": false,
+        "is_real_player": false,
         "is_session_storage": true,
+        "is_silverlight": false,
         "is_touch": false,
         "width": 1674
       }
